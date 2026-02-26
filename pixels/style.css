@@ -100,7 +100,6 @@ align-content: center;
     height: auto;
   color: var(--main-font-color);
   font-size: 22px; /* 增加文本以启用滚动 */
-  padding: 30px 66px;
   margin: 0 auto;
   transition: all 0.4s ease;
 }
