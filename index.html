@@ -1,73 +1,13 @@
-<!-- 你看啥呢 -->
- <!-- 你看啥呢 -->
-  <!-- 你看啥呢 -->
-   <!-- 你看啥呢 -->
-    <!-- 你看啥呢 -->
-     <!-- 你看啥呢 -->
-      <!-- 你看啥呢 -->
-       <!-- 你看啥呢 -->
-        <!-- 你看啥呢 -->
-         <!-- 你看啥呢 -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>狐星社</title>
-    <link rel="stylesheet" href="home/index.css">
-<script src="home/index.js"></script>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>FoxPixels Network</title>
+    <link rel="stylesheet" type="text/css" href="pixels/style.css">
+    <meta http-equiv="refresh" content="1;url=pixels/index.html">
 </head>
 <body>
-    <div class="main">
-        <a href="index.html">
-            <span class="active">🏠</span>
-            <div>狐星社</div>
-        </a>
-        <a href="home/index.html">
-            <span>🙃</span>
-            <div>这是一个页面</div>
-        </a>
-        </div>
-    <div class="content">
-        <div class="home">
-        <h1>狐星社</h1>
-        </div>
-        <div class="home2">
-        <div id="typed-strings">
-        <p>hh</p>
-    </div>
-    <span id="typed"></span>
-        </div>
-        <div class="dawn">
-        <a href="home/index.html">开始使用</a>
-        </div>
-        </div>
-</body>
-<script>
-var typed = new Typed('#typed', {
-    stringsElement: '#typed-strings',
-    typeSpeed: 80,
-        loop:true,
-  });
-</script>
-	<script>
-		// 创建水波纹元素
-		function createRipple(event) {
-			const button = event.currentTarget;
-			const circle = document.createElement("div");
-			button.appendChild(circle);
-
-			// 计算水波纹的位置和大小
-			const diameter = Math.max(button.clientWidth, button.clientHeight);
-			const radius = diameter / 2;
-			circle.style.width = circle.style.height = `${diameter}px`;
-			circle.style.left = `${event.clientX - button.offsetLeft - radius}px`;
-			circle.style.top = `${event.clientY - button.offsetTop - radius}px`;
-
-			// 启动动画
-			circle.classList.add("ripple");
-			setTimeout(() => circle.remove(), 1000);
-		}
-	</script>
+    <div class="bglogo fade-in" translate="no"><h1>FoxPixels Network</h1></div>
 </body>
 </html>
