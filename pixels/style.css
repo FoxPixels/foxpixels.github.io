@@ -100,6 +100,7 @@ align-content: center;
     height: auto;
   color: var(--main-font-color);
   font-size: 22px; /* 增加文本以启用滚动 */
+  padding: 30px 33px;
   margin: 0 auto;
   transition: all 0.4s ease;
 }
@@ -185,8 +186,7 @@ width: 400px;
         }
 .status {
   border-radius: 25px;
-  text-align: center;
-  width: 40px;
+  text-align: center;  width: 40px;
 padding: 5px;
 font-size: 12px;
 background-color: var(--batton-3);

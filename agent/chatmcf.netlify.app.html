@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!-- saved from url=(0035)https://chatmcf.netlify.app/?user=1 -->
+<html lang="zh-CN">
+    <head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <title>MC玩家专属聊天</title>
+    <link rel="stylesheet" type="text/css" href="chatmcf.netlify.app.css">
+</head>
+<body>
+
+<div class="user-info" id="userShow">当前用户：1</div>
+
+<div class="chat-box" id="chatBox">
+    <div class="sys-msg">📢 连接聊天服务器中...</div>
+</div>
+
+<div class="input-box">
+    <input type="text" id="msgInput" placeholder="输入消息...">
+    <button id="sendBtn">发送</button>
+</div>
+
+<div class="tip">💬 所有MC玩家都能看到 | 消息7天后自动清除</div>
+
+<script src="./MC玩家专属聊天_files/socket.io.min.js.下载"></script>
+<script>
+    // 1. 获取从主页传过来的用户名（自动登录，无登录选项）
+    function getUsername() {
+        const params = new URLSearchParams(window.location.search);
+        return params.get('user') || "MC玩家";
+    }
+    const myName = getUsername();
+    document.getElementById("userShow").innerText = `当前用户：${myName}`;
+
+    const chatBox = document.getElementById("chatBox");
+    const msgInput = document.getElementById("msgInput");
+    const sendBtn = document.getElementById("sendBtn");
+
+    // 2. 连接免费公共聊天服务器（全网互通）
+    const socket = io("wss://mc-chat-public.onrender.com");
+
+    // 3. 监听消息
+    socket.on("allMsg", (msgs) => {
+        chatBox.innerHTML = `<div class="sys-msg">📢 MC全服公共聊天（消息7天自动清理）</div>`;
+        msgs.forEach(msg => {
+            const isMe = msg.user === myName;
+            chatBox.innerHTML += `
+            <div class="msg ${isMe ? 'user-msg' : 'other-msg'}">
+                <div class="name">${msg.user}</div>
+                ${msg.text}
+            </div>`;
+        });
+        chatBox.scrollTop = chatBox.scrollHeight;
+    });
+
+    // 4. 发送消息
+    function send() {
+        const text = msgInput.value.trim();
+        if (!text) return;
+        socket.emit("sendMsg", { user: myName, text });
+        msgInput.value = "";
+    }
+
+    sendBtn.onclick = send;
+    msgInput.addEventListener("keypress", (e) => {
+        if (e.key === "Enter") send();
+    });
+</script>
+
+</body></html>
