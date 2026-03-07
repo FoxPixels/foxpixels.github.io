@@ -55,7 +55,7 @@ h2 {
     content: "260226";
 }
 .api::before {
-    content: "Moonland API For FoxPixels：";
+    content: "Moonland API：";
 }
 .api::after {
     content: "B 0.1.3.260226";
