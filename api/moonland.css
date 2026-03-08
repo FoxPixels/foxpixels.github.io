@@ -1,0 +1,196 @@
+:root {
+    --bg-color: #F5F5F5;
+    --font-color: #212121;
+    --menu-color: rgba(187, 222, 251, 0.65);
+    --menu-color-active: #81D4FA;
+    --menu-color-hover: #E1F5FE;
+    --menu-font-color: #212121;
+    --main-color: rgba(187, 222, 251, 0.95);
+    --batton-1: #DCDCDC;
+    --batton-2: #D3D3D3;
+    --batton-3: #C0C0C0;
+    --batton-font: #212121;
+    --window-bg: #e3f2fd;;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --window-bg: #111111;
+    --bg-color: #212121;
+    --font-color: #fafafa;
+    --menu-color: rgba(38, 50, 56, 0.65);
+    --menu-color-active: #546E7A;
+    --menu-color-hover: #37474F;
+    --menu-font-color: #fafafa;
+    --main-color: rgba(38, 50, 56, 0.95);
+    --batton-1: #808080;
+    --batton-2: #f1f1f1;
+    --batton-3: #696969;
+  }
+}
+body {
+user-select: none;
+margin: 0 0 0 0;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+background-color: var(--bg-color);
+}
+h1 {
+  color: var(--font-color);
+}
+h2 {
+  color: var(--font-color);
+}
+.window {
+    z-index: 1000;
+    position: fixed;
+    font-size: 12px;
+    width: 100%;
+    background-color: var(--window-bg);
+    color: var(--font-color);
+    text-align: center;
+    padding: 8px 0;
+}
+.window::before {
+  content: "FoxPixels Studio 2026";
+}
+.version::before {
+    content: "Webpage：";
+}
+.version::after {
+    content: "260226";
+}
+.moonland-api::before {
+    content: "Moonland API：";
+}
+.moonland-api::after {
+    content: "B 0.1.4.260308";
+}
+.moonland-update::before {
+    content: "Moonland API更新：";
+}
+.moonland-update::after {
+    content: "\a· 重新排版\a并且吃了汉堡包！";
+    white-space: pre;
+}
+.menu {
+  backdrop-filter: blur(20px) saturate(180%);
+  align-content: center;
+  text-align: center;
+  height: 55px;
+  width: 394px;
+  position: fixed;
+  z-index: 1;
+  background-color: var(--menu-color);
+  overflow-x: hidden;
+  transition: width 0.2s ease;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  border-radius: 100vh;
+}
+.menu a {
+  border-radius: 100vh;
+    margin: 0 5px 0 5px;
+    padding: 5px 15px 5px 15px;
+  text-decoration: none;
+  font-size: 25px;
+  color: var(--main-font-color);
+  transition: all 0.2s ease;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.menu a:hover{
+  background-color: var(--menu-color-hover);
+}
+.menu a.active {
+  background-color: var(--menu-color-active);
+}
+.main {
+    max-width: 1000px;
+    height: auto;
+  color: var(--font-color);
+  font-size: 22px; /* 增加文本以启用滚动 */
+  padding: 0 30px;
+  margin: 0 auto;
+  transition: all 0.4s ease;
+}
+.bglogo { 
+  text-align: center;
+  user-select: none;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 1;
+color: var(--font-color);
+width: 400px;
+}
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#home {
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px;
+}    
+.card {
+  font-size: 20px;
+  line-height: 25px;
+  cursor: pointer;
+  background-color: var(--main-color);
+  padding: 25px;
+  border-radius: 26px;
+  background-color: var(--main-color);
+  transition: 0.25s ease;
+}
+.card:hover {
+  scale: 1.025;
+}
+  @media (max-width: 575px) {
+        }
+@media (max-width: 1175px) {
+  .main {
+    max-width: 800px;
+  }
+        }
+@media (max-width: 975px) {
+  .main {
+    max-width: 600px;
+  }
+        }
+@media (max-width: 775px) {
+  .main {
+    max-width: 400px;
+  }
+}     
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}     
+.fade-in {
+   animation: fadeIn 0.6s ease forwards;
+}
+.status {
+  color: var(--font-colo);
+  border-radius: 25px;
+  text-align: center;  width: 40px;
+padding: 5px;
+font-size: 12px;
+background-color: var(--batton-3);
+}
+.card b {
+font-size: 25px;
+}
+.status.green {
+background-color: green;
+}
+.status.orange {
+background-color: orange;
+}
+.status.red {
+background-color: red;
+}
