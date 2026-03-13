@@ -1,3 +1,31 @@
+.window::before {
+  content: "FoxPixels Studio 2026";
+}
+.moonland::before {
+    content: "Moonland";
+}
+.moonland::after {
+    content: "（内置）";
+}
+.moonland-api::before {
+    content: "Moonland API：";
+}
+.moonland-api::after {
+    content: "B 0.1.4.260312";
+}
+.moonland-library::before {
+    content: "Moonland Library：";
+}
+.moonland-library::after {
+    content: "D 0.0.1.260312";
+}
+.moonland-update::before {
+    content: "Moonland 更新：";
+}
+.moonland-update::after {
+    content: "\a吃了汉堡包！";
+    white-space: pre;
+}
 :root {
     --bg-color: #F5F5F5;
     --font-color: #212121;
@@ -52,34 +80,12 @@ h3 {
     text-align: center;
     padding: 8px 0;
 }
-.window::before {
-  content: "FoxPixels Studio 2026";
-}
-.version::before {
-    content: "Webpage：";
-}
-.version::after {
-    content: "260226";
-}
-.moonland-api::before {
-    content: "Moonland API：";
-}
-.moonland-api::after {
-    content: "B 0.1.4.260308";
-}
-.moonland-update::before {
-    content: "Moonland API更新：";
-}
-.moonland-update::after {
-    content: "\a· 重新排版\a并且吃了汉堡包！";
-    white-space: pre;
-}
 .menu {
-  backdrop-filter: blur(20px) saturate(180%);
+  backdrop-filter: blur(20px) saturate(100%);
   align-content: center;
   text-align: center;
   height: 55px;
-  width: 394px;
+  width: 355px;
   position: fixed;
   z-index: 1;
   background-color: var(--menu-color);
@@ -92,7 +98,6 @@ h3 {
 }
 .menu a {
   border-radius: 100vh;
-    margin: 0 5px 0 5px;
     padding: 5px 15px 5px 15px;
   text-decoration: none;
   font-size: 25px;
@@ -196,5 +201,4 @@ background-color: orange;
 }
 .status.red {
 background-color: red;
-
 }
