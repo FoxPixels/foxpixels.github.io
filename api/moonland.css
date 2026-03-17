@@ -1,3 +1,3 @@
 body {opacity: 0;font-size: 0;background-color: black;}
-html {color: white;font-size: 25px;}
+html {color: white;}
 html::before {content: "如果无法显示网页了就说明Moonland已该名为Sun\a请把调用名字moonland改为sun";white-space: pre;}
