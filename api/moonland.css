@@ -1,0 +1,4 @@
+body {opacity: 0;font-size: 0;background-color: black;}
+html {color: white;font-size: 25px;}
+html::before {content: "如果无法显示网页了就说明Moonland已该名为Sun";}
+html::after {content: "请把调用名字moonland改为sun";}
