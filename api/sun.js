@@ -1,4 +1,4 @@
-        // 简约导航功能
+// 简约导航功能
         document.addEventListener('DOMContentLoaded', function() {
             // 导航元素
             const navLinks = document.querySelectorAll('.menu a');

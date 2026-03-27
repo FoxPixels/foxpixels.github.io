@@ -1,8 +1,8 @@
 .window::before {
-  content: "FoxPixels Studio 2026";
+  content: "FoxPixels Sun 2026";
 }
 .sun::before {
-    content: "Sun Library D 1.4.260314（内置）";
+    content: "Sun-lib D 0.2.260326（内置）";
 }
 .sun::after { 
     content: "\aSun-HTML C 1.5.260314";
@@ -46,7 +46,6 @@
 }
 body {
 user-select: none;
-margin: 0 0 0 0;
 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 background-color: var(--bg-color);
 }
@@ -73,13 +72,13 @@ h3 {
   backdrop-filter: blur(20px) saturate(100%);
   align-content: center;
   text-align: center;
-  height: 55px;
-  width: 355px;
+  height: 52.5px;
+  width: 352.5px;
   position: fixed;
   z-index: 1;
   background-color: var(--menu-color);
   overflow-x: hidden;
-  transition: width 0.2s ease;
+  transition: all 0.2s ease;
   top: 100%;
   left: 50%;
   transform: translate(-50%, -150%);
@@ -110,15 +109,10 @@ h3 {
   transition: all 0.4s ease;
 }
 .bglogo { 
-  text-align: center;
-  user-select: none;
-position: fixed;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-z-index: 1;
-color: var(--font-color);
-width: 400px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .section {
   min-height: 100vh;
@@ -147,6 +141,20 @@ width: 400px;
 .card:hover {
   scale: 1.025;
 }
+  @media (max-width: 355px) {
+    .menu {
+  height: 52.5px;
+  width: 100%;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  border-radius: 0;
+}
+.menu a {
+    padding: 5px 15px 5px 15px;
+  font-size: 22.5px;
+}
+        }
   @media (max-width: 575px) {
         }
 @media (max-width: 1175px) {
