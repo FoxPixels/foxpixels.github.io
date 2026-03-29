@@ -8,6 +8,13 @@
     content: "\aSun-HTML C 1.5.260314";
     white-space: pre;
 }
+.sun-tv::before {
+    content: "Sun-TV ";
+}
+.sun-tv::after { 
+    content: "D 0.1.260329";
+    white-space: pre;
+}
 .sun-update::before {
     content: "Sun 更新：";
 }
@@ -99,6 +106,36 @@ h3 {
 .menu a.active {
   background-color: var(--menu-color-active);
 }
+.menu-tv {
+  backdrop-filter: blur(20px) saturate(100%);
+  align-content: center;
+  text-align: center;
+  height: 52.5px;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  background-color: var(--menu-color);
+  overflow-x: hidden;
+  transition: all 0.2s ease;
+  border-radius: 100vh;
+  color: var(--font-color);
+}
+.menu-tv a {
+  color: var(--font-color);
+  border-radius: 100vh;
+    padding: 5px 15px 5px 15px;
+  text-decoration: none;
+  font-size: 30px;
+  color: var(--main-font-color);
+  transition: all 0.2s ease;
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+.menu-tv a:hover{
+  background-color: var(--menu-color-hover);
+}
+.menu-tv a.active {
+  background-color: var(--menu-color-active);
+}
 .main {
     max-width: 1000px;
     height: auto;
@@ -115,6 +152,12 @@ h3 {
   justify-content: center;
 }
 .section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.section-tv {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
